@@ -17,14 +17,14 @@ The current data collection is contained in JSON files organized into 'Song Data
 ```JSON
 {
   "num_songs": 1,
-  "artist_id": "ARGSJW91187B9B1D6B",
-  "artist_latitude": 35.21962,
-  "artist_longitude": -80.01955,
-  "artist_location": "North Carolina",
-  "artist_name": "JennyAnyKind",
-  "song_id": "SOQHXMF12AB0182363",
-  "title": "Young Boy Blues",
-  "duration": 218.77506,
+  "artist_id": "ARJIE2Y1187B994AB7",
+  "artist_latitude": null,
+  "artist_longitude": null,
+  "artist_location": "",
+  "artist_name": "Line Renaud",
+  "song_id": "SOUPIRU12A6D4FA1E1",
+  "title": "Der Kleine Dompfaff",
+  "duration": 152.92036,
   "year": 0
 }
 ```
@@ -33,24 +33,24 @@ The current data collection is contained in JSON files organized into 'Song Data
 
 ```JSON
 {
-  "artist": "Survivor",
-  "auth": "Logged In",
-  "firstName": "Jayden",
-  "gender": "M",
-  "itemInSession": 0,
-  "lastName": "Fox",
-  "length": 245.36771,
-  "level": "free",
-  "location": "New Orleans-Metairie, LA",
-  "method": "PUT",
-  "page": "NextSong",
-  "registration": 1541033612796,
-  "sessionId": 100,
-  "song": "Eye Of The Tiger",
-  "status": 200,
-  "ts": 1541110994796,
-  "userAgent": "\"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36\"",
-  "userId": "101"
+  "artist":null,
+  "auth":"Logged In",
+  "firstName":"Walter",
+  "gender":"M",
+  "itemInSession":0,
+  "lastName":"Frye",
+  "length":null,
+  "level":"free",
+  "location":"San Francisco-Oakland-Hayward, CA",
+  "method":"GET",
+  "page":"Home",
+  "registration":1540919166796.0,
+  "sessionId":38,
+  "song":null,
+  "status":200,
+  "ts":1541105830796,
+  "userAgent":"\"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/36.0.1985.143 Safari\/537.36\"",
+  "userId":"39"
 }
 ```
 
