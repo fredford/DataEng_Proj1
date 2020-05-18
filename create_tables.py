@@ -33,7 +33,6 @@ def drop_tables(cur, conn):
     """
     for query in drop_table_queries:
         
-        # Attempt drop table query
         try:
             cur.execute(query)
         except psycopg2.Error as e:
@@ -48,8 +47,6 @@ def create_tables(cur, conn):
     Creates each table using the queries in `create_table_queries` list. 
     """
     for query in create_table_queries:
-        
-        # Attempt create table query
         try:
             cur.execute(query)
         except psycopg2.Error as e:

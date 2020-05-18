@@ -8,6 +8,12 @@ import json
 
 
 def process_song_file(cur, filepath):
+    """Function used to process song json files and separate it into song data and artist data.
+    
+    Arguments:
+        cur      -- Cursor object used to connect to PostgreSQL
+        filepath -- String holding the file name/pathway to be opened 
+    """
     # open song file into dictionary
     file_dict = json.load(open(filepath, 'r'))
 
@@ -20,6 +26,12 @@ def process_song_file(cur, filepath):
     cur.execute(artist_table_insert, artist_data)
 
 def process_log_file(cur, filepath):
+    """Function used to process log json files and separate it into time, user, and songplay data.
+    
+    Arguments:
+        cur      -- Cursor object used to connect to PostgreSQL
+        filepath -- String holding the file name/pathway to be opened 
+    """
     
     # open log file
     df = pd.read_json(filepath, lines=True, convert_dates=['ts'])
@@ -59,10 +71,19 @@ def process_log_file(cur, filepath):
 
         # insert songplay record
         songplay_data = [row.ts, row.userId, row.level, songid, artistid, row.sessionId, row.location, row.userAgent]
-        cur.execute(songplay_table_insert, songplay_data)
+        
+        cur.execute(songplay_table_insert, songplay_data+songplay_data)
 
 
 def process_data(cur, conn, filepath, func):
+    """Function used to acquire the file paths in the given directory, and perform the specifief function on the information in that directory.
+    
+    Arguments:
+        cur      -- Cursor object used to connect to PostgreSQL
+        conn     -- PostgreSQL server connection
+        filepath -- Directory to be read and processed
+        func     -- The processing function to be used
+    """
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
